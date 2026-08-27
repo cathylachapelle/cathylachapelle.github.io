@@ -1,0 +1,251 @@
+/* ------------------------------------------------------------------
+   Cathy Lachapelle - Professeur de piano
+   Feuille de style unique du site.
+   Reprend l'apparence du theme d'origine (Organic Studio), reduite
+   aux seules regles utilisees par les cinq pages du site.
+   ------------------------------------------------------------------ */
+
+/* --- Base ------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fcfbf9;
+	color: #666666;
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 20px;
+	margin: 0 auto;
+	padding: 0;
+	border-top: 8px solid black;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+	text-decoration: underline;
+	outline: none;
+}
+
+img {
+	border: none;
+	max-width: 100%;
+}
+
+h1 {
+	color: #000000;
+	font-size: 14px;
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 6px 0 2px;
+	padding: 4px 0;
+	line-height: 18px;
+}
+
+h2 {
+	color: #333333;
+	font-size: 14px;
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-indent: 1px;
+	margin: 14px 0 4px;
+	padding: 4px 0 2px;
+	line-height: 18px;
+}
+
+p {
+	margin: 0;
+	padding: 5px 0;
+}
+
+/* --- Gabarit ---------------------------------------------------- */
+
+#wrap {
+	width: 1000px;
+	margin: 20px auto 10px;
+	padding: 20px;
+}
+
+/* --- En-tete ---------------------------------------------------- */
+
+#header {
+	width: 960px;
+	height: 80px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+#header #logo {
+	background: url(images/entete.png) no-repeat;
+	display: block;
+	width: 960px;
+	height: 80px;
+	margin: 0 auto;
+	padding: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+/* --- Menu ------------------------------------------------------- */
+
+#navbar {
+	width: 960px;
+	height: 30px;
+	color: #666666;
+	font-size: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	line-height: 20px;
+	letter-spacing: -0.2px;
+	margin: 0 auto 10px;
+	padding: 0;
+}
+
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 1;
+	overflow: hidden;
+}
+
+#navbar li {
+	float: left;
+}
+
+#navbar a {
+	display: block;
+	background: url(images/menu_border.png) right no-repeat;
+	color: #999999;
+	padding: 6px 18px 6px 6px;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+#navbar a:focus,
+#navbar a:hover,
+#navbar a:active {
+	color: #000000;
+	outline: 0;
+}
+
+#navbar .actif a {
+	color: #000000;
+}
+
+/* --- Contenu ---------------------------------------------------- */
+
+#content {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+#illustration {
+	float: left;
+}
+
+#illustration img {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#texte {
+	float: right;
+	width: 754px;
+	height: 510px;
+	margin: 0 0 0 9px;
+	padding: 0 27px 0 0;
+	overflow: auto;
+}
+
+#texte .note {
+	text-decoration: underline;
+}
+
+/* --- Pied de page ----------------------------------------------- */
+
+#footer {
+	width: 1000px;
+	height: 40px;
+	color: #999999;
+	font-size: 11px;
+	margin: 0 auto 20px;
+	padding: 0 20px;
+}
+
+#footer p {
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+/* --- Petits ecrans ---------------------------------------------- */
+
+@media (max-width: 1000px) {
+	#wrap,
+	#header,
+	#header #logo,
+	#navbar,
+	#content,
+	#footer {
+		width: auto;
+		max-width: 100%;
+	}
+
+	#wrap {
+		padding: 10px;
+	}
+
+	#header,
+	#header #logo {
+		height: auto;
+		min-height: 60px;
+		background-size: contain;
+	}
+
+	#navbar {
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	#navbar li {
+		float: none;
+	}
+
+	#navbar a {
+		background: none;
+		padding: 6px 0;
+	}
+
+	#illustration {
+		display: none;
+	}
+
+	#texte {
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+	}
+
+	#footer {
+		height: auto;
+		padding: 0;
+	}
+}
